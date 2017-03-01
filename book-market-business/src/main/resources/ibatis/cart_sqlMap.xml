@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="cartService">
+    <resultMap id="cart_map" class="com.book.market.model.po.Cart">
+        <result property="id" column="id" jdbcType="INTEGER"></result>
+        <result property="userId" column="user_id" jdbcType="INTEGER"></result>
+        <result property="isDelete" column="is_delete" jdbcType="INTEGER"></result>
+    </resultMap>
+
+    <select id="query_by_user_id" parameterClass="java.lang.Integer" resultMap="cart_map">
+        SELECT * FROM cart WHERE user_id = #userId# and is_delete = 0;
+    </select>
+
+    <insert id="insert_cart" parameterClass="com.book.market.model.po.Cart">
+        insert into cart (user_id,is_delete) values (#userId#,0);
+    </insert>
+
+
+</sqlMap>

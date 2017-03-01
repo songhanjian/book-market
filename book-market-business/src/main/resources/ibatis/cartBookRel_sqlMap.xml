@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="cartBookRelService">
+    <resultMap id="cart_book_rel_map" class="com.book.market.model.po.CartBookRel">
+        <result property="id" column="id" jdbcType="INTEGER"></result>
+        <result property="cartId" column="cart_id" jdbcType="INTEGER"></result>
+        <result property="bookId" column="book_id" jdbcType="INTEGER"></result>
+        <result property="bookName" column="book_name" jdbcType="VARCHAR"></result>
+        <result property="bookPrice" column="book_price" jdbcType="INTEGER"></result>
+        <result property="count" column="count" jdbcType="INTEGER"></result>
+        <result property="totalPrice" column="total_price" jdbcType="INTEGER"></result>
+        <result property="isDelete"  column="is_delete" jdbcType="INTEGER" ></result>
+    </resultMap>
+
+
+    <select id="query_by_cart_id" resultMap="cart_book_rel_map" parameterClass="java.lang.Integer">
+        SELECT * from cart_book_rel WHERE cart_id = #cartId# and is_delete = 0;
+    </select>
+
+    <update id="update_cart_book_rel" parameterClass="com.book.market.model.po.CartBookRel">
+        UPDATE cart_book_rel SET `count` = #count#,total_price = #totalPrice# where id = #id# and is_delete = 0;
+    </update>
+
+    <delete id="delete_by_ids" parameterClass="java.util.Map">
+        UPDATE cart_book_rel set is_delete = 1 WHERE id in
+        <iterate open="(" close=");" conjunction="," property="ids">
+            #ids[]#
+        </iterate>
+    </delete>
+
+
+    <insert id="insert_cart_book_rel" parameterClass="com.book.market.model.po.CartBookRel">
+        INSERT INTO cart_book_rel (cart_id,book_id,book_name,book_price,`count`,total_price,is_delete) VALUES (#cartId#,#bookId#,#bookName#,#bookPrice#,#count#,#totalPrice#,0);
+    </insert>
+
+
+    <select id="query_by_cart_id_book_id" resultMap="cart_book_rel_map" parameterClass="java.util.Map">
+        SELECT * FROM cart_book_rel WHERE cart_id = #cartId# and book_id = #bookId# and is_delete = 0;
+    </select>
+
+
+</sqlMap>

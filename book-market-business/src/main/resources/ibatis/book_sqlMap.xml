@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="bookService">
+    <resultMap id="book_map" class="com.book.market.model.po.Book">
+        <result property="id" column="id" jdbcType="INTEGER"></result>
+        <result property="name" column="name" jdbcType="VARCHAR"></result>
+        <result property="desc" column="desc" jdbcType="VARCHAR"></result>
+        <result property="imgUrl" column="img_url" jdbcType="VARCHAR"></result>
+        <result property="price" column="price" jdbcType="INTEGER"></result>
+        <result property="relate" column="relate" jdbcType="VARCHAR"></result>
+        <result property="isDelete" column="is_delete" jdbcType="INTEGER"></result>
+    </resultMap>
+
+
+    <resultMap id="book_map_iso" class="com.book.market.model.po.Book">
+        <result property="id" column="id" jdbcType="INTEGER"></result>
+        <result property="name" column="name" jdbcType="VARCHAR"></result>
+        <result property="imgUrl" column="img_url" jdbcType="VARCHAR"></result>
+    </resultMap>
+
+    
+    <select id="query_by_id" resultMap="book_map" parameterClass="java.lang.Integer">
+        SELECT  * FROM book WHERE id = #id# AND  is_delete = 0;
+    </select>
+    
+    
+    <select id="query_all" resultMap="book_map" parameterClass="java.util.Map">
+        SELECT * FROM  book WHERE is_delete = 0 limit #pageNum#,#pageSize#;
+    </select>
+
+
+    <select id="query_for_iso_by_id" resultMap="book_map_iso" parameterClass="java.lang.Integer">
+        SELECT `id`,`name`,`img_url` from book where is_delete = 0 and `id` = #id#;
+    </select>
+
+    <select id="query_for_iso_by_tag" resultMap="book_map_iso" parameterClass="java.util.Map">
+        SELECT `id`,`name`,`img_url` from book where is_delete = 0
+         <dynamic prepend="and">
+             <isNotEmpty property="name">
+                 `name` LIKE concat('%',#name#,'%')
+             </isNotEmpty>
+         </dynamic>
+        limit #pageNum#,#pageSize#
+    </select>
+
+    <select id="query_for_count" resultClass="java.lang.Integer" parameterClass="java.util.Map">
+        SELECT COUNT(*) FROM book WHERE is_delete = 0
+        <dynamic prepend="and">
+            <isNotEmpty property="name">
+                `name` LIKE concat('%',#name#,'%')
+            </isNotEmpty>
+        </dynamic>
+
+        ;
+    </select>
+    
+    
+</sqlMap>
