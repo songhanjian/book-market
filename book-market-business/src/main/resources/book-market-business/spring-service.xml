@@ -18,7 +18,6 @@
 	http://www.springframework.org/schema/util/spring-util-3.1.xsd
 	  http://www.odianyun.com/schema/occ-client
       ">
-
     <bean id="dcenterCommonPropertyConfigurer"
           class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="ignoreUnresolvablePlaceholders" value="true"/>
@@ -36,7 +35,6 @@
     <!-- false 接口代理 true 继承类代理 -->
     <aop:aspectj-autoproxy proxy-target-class="false"/>
     <!--<tx:annotation-driven/>-->
-
     <!-- 写数据源配置-->
     <bean id="dataSourceWrite" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"
           lazy-init="true">
