@@ -1,0 +1,52 @@
+<div ng-init="init()">
+    <div class="title"><span class="title_icon"><img src="images/bullet1.gif" alt="" title=""/></span>Register
+    </div>
+    <div class="feat_prod_box_details">
+        <p class="details"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud. </p>
+        <div class="contact_form">
+            <div class="form_subtitle">create new account</div>
+            <form name="register" action="#">
+                <div class="form_row">
+                    <label class="contact"><strong>Username:</strong></label>
+                    <input type="text" class="contact_input" ng-model="user.username" required/>
+                </div>
+                <div class="form_row">
+                    <label class="contact"><strong>Password:</strong></label>
+                    <input type="password" class="contact_input" ng-model="user.password" required/>
+                </div>
+                <div class="form_row">
+                    <label class="contact"><strong>Email:</strong></label>
+                    <input type="email" class="contact_input" ng-model="user.email" required/>
+                </div>
+                <div class="form_row">
+                    <label class="contact"><strong>Phone:</strong></label>
+                    <input type="number" class="contact_input" ng-model="user.phone" required/>
+                </div>
+                <div class="form_row">
+                    <label class="contact"><strong>Company:</strong></label>
+                    <input type="text" class="contact_input" ng-model="user.company" required/>
+                </div>
+                <div class="form_row">
+                    <label class="contact"><strong>Adrres:</strong></label>
+                    <input type="text" class="contact_input" ng-model="user.address" required/>
+                </div>
+                <div class="form_row">
+                    <label><strong>{{registerMesg}}</strong></label>
+                </div>
+                <div class="form_row">
+                    <div class="terms">
+                        <input type="checkbox" name="terms"/>
+                        I agree to the <a href="#">terms &amp; conditions</a></div>
+                </div>
+
+                <div class="form_row">
+                    <input type="button" class="register" value="register" ng-click="accountCommit(register.$valid)"/>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>

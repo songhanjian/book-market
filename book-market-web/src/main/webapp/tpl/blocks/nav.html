@@ -1,0 +1,97 @@
+<!-- first -->
+
+
+<nav ui-nav class="navi" ng-init="navContrl=0">
+  <ul class="nav">
+  <li ng-class="{active:navContrl==0}" >
+    <a ng-click="navContrl=0" class="auto">
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <i class="glyphicon glyphicon-th"></i>
+      <span>表单</span>
+    </a>
+    <ul class="nav nav-sub dk">
+            <li ui-sref-active="active">
+        <a ui-sref="app.formSubmit">
+          <i class="glyphicon glyphicon-calendar icon text-info-dker"></i>
+          <span class="font-bold" >表单提交</span>
+        </a>
+      </li>
+      <li>
+        <a ui-sref="app.search_result">
+          <i class="glyphicon glyphicon-calendar icon text-info-dker"></i>
+          <span class="font-bold">详情模板</span>
+        </a>
+      </li>
+      <li>
+        <a ui-sref="app.process">
+          <i class="glyphicon glyphicon-calendar icon text-info-dker"></i>
+          <span class="font-bold">进度控制模板</span>
+        </a>
+      </li>
+      <li>
+        <a ui-sref="app.tree">
+          <i class="glyphicon glyphicon-calendar icon text-info-dker"></i>
+          <span class="font-bold">树</span>
+        </a>
+      </li>
+      <li>
+        <a ui-sref="app.tabSpecail">
+          <i class="glyphicon glyphicon-calendar icon text-info-dker"></i>
+          <span class="font-bold">tab切换</span>
+        </a>
+      </li>
+
+
+    </ul>
+  </li>
+
+    <li  ng-class="{active:navContrl==1}">
+      <a ng-click="navContrl=1" href class="auto">
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+        <i class="glyphicon glyphicon-th"></i>
+        <span>登录注册</span>
+      </a>
+      <ul class="nav nav-sub dk">
+
+        <li  ui-sref-active="active" >
+          <a ui-sref="access.signin">
+            <i class="glyphicon glyphicon-calendar icon text-info-dker"></i>
+            <span class="font-bold">登录</span>
+          </a>
+        </li>
+        <li  >
+          <a ui-sref="access.signup">
+            <i class="glyphicon glyphicon-calendar icon text-info-dker"></i>
+            <span class="font-bold">注册</span>
+          </a>
+        </li>
+        <li  >
+          <a ui-sref="access.forgotpwd">
+            <i class="glyphicon glyphicon-calendar icon text-info-dker"></i>
+            <span class="font-bold">忘记密码</span>
+          </a>
+        </li>
+        <li  >
+          <a ui-sref="access.login">
+            <i class="glyphicon glyphicon-calendar icon text-info-dker"></i>
+            <span class="font-bold">登录(包含持久层操作)</span>
+          </a>
+        </li>
+
+      </ul>
+    </li>
+    </ul>
+
+
+
+
+
+
+</nav>
+<!-- / third -->

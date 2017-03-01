@@ -1,0 +1,50 @@
+<div ng-init="init()">
+    <div class="crumb_nav"><a ui-sref="navi.mainform" ui-sref-opt="{reload:true}">home</a> &gt;&gt; {{book.name}}</div>
+    <div class="title"><span class="title_icon"><img src="images/bullet1.gif" alt="" title=""/></span>{{book.name}}
+    </div>
+    <div class="feat_prod_box_details">
+        <div class="prod_img"><a><img class="self_define_img" ng-src="{{book.imgUrl}}" alt="" title="" border="0"/></a>
+            <br/>
+            <br/>
+            <a href="images/big_pic.jpg" rel="lightbox"><img src="images/zoom.gif" alt="" title="" border="0"/></a>
+        </div>
+        <div class="prod_det_box">
+            <div class="box_top"></div>
+            <div class="box_center">
+                <div class="prod_title">Details</div>
+                <p class="details">&nbsp;&nbsp;&nbsp;&nbsp;{{briefDesc}} </p>
+                <div class="price"><strong>PRICE:</strong> <span class="red">{{book.price}} ￥</span></div>
+                <a href ng-click="addToCart()" class="more"><img src="images/order_now.gif" alt="" title="" border="0"/></a>
+                <div class="clear"></div>
+            </div>
+            <div class="box_bottom"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div id="demo" class="demolayout">
+        <ul id="demo-nav" class="demolayout">
+            <li><a href ng-class="{active:tab1}" ng-click="tab1=true;tab2=false">More details</a></li>
+            <li><a href ng-class="{active:tab2}" ng-click="tab1=false;tab2=true">Related books</a></li>
+        </ul>
+        <div class="tabs-container">
+            <div ng-show="tab1" class="tab" id="tab1">
+                <p class="more_details">&nbsp;&nbsp;&nbsp;&nbsp;{{book.desc}}</p>
+            </div>
+            <div ng-show="tab2" class="tab" id="tab2">
+                <div class="new_products">
+                    <div ng-repeat="b in bookRelate">
+                        <div class="new_prod_box"><a style="height: 38px" href ng-click="routeToDetail(b.id)">{{b.name.substr(0,15)}}<br>{{b.name.substr(15,b.name.length)}}</a>
+                            <div class="new_prod_bg"><span class="new_icon"><img src="images/new_icon.gif" alt=""
+                                                                                 title=""/></span> <a href
+                                                                                                      ng-click="routeToDetail(b.id)"><img
+                                    ng-src="{{b.imgUrl}}" alt="" title="" class="thumb self_define_botton_img" border="0"/></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>

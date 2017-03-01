@@ -1,0 +1,30 @@
+<div ng-init="init()">
+    <div class="crumb_nav"><a ui-sref="navi.mainform">home</a> &gt;&gt; book</div>
+    <div class="title"><span class="title_icon"><img src="images/bullet1.gif" alt="" title=""/></span><input
+            ng-model="tagwords" placeholder="here to search">
+        <button class="select" style="color: floralwhite;background-color:#ff8000;border: 0px"
+                ng-click="getBooks(tagwords,1)">search
+        </button>
+    </div>
+
+    <div class="new_products">
+        <div ng-repeat="b in books">
+            <div class="new_prod_box"><a style="height: 38px" href ng-click="routeToDetail(b.id)">{{b.name.substr(0,15)}}<br>{{b.name.substr(15,b.name.length)}}</a>
+                <div class="new_prod_bg"><a href ng-click="routeToDetail(b.id)"><img ng-src="{{b.imgUrl}}" alt="" title=""
+                                                                                     class="thumb self_define_botton_img"
+                                                                                     border="0"/></a></div>
+            </div>
+        </div>
+        <div class="pagination">
+            <span class="disabled" ng-show="!page.startPermit"><<</span>
+            <a href ng-show="page.startPermit" ng-click="lastPages()"><<</a>
+            <a href ng-repeat="p in page.currentPages" ng-class="{current:p.isCurrent}"
+               ng-click="getBooks(tagwords,p.value)">{{p.value}}</a>
+            <span class="disabled" ng-show="!page.endPermit">>></span>
+            <a href ng-show="page.endPermit" ng-click="nextPages()">>></a>
+
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+

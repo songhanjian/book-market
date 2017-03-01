@@ -1,0 +1,369 @@
+<div class="wrapper-md bg-light b-b headerPadding">
+    <h1 class="m-n font-thin h3"><a href="">一级目录1</a>&gt;<a href="">表单</a></h1>
+</div>
+<div class="wrapper-md">
+    <tabset class="tab-container">
+        <tab>
+            <tab-heading>
+                选项卡 <span class="badge badge-sm m-l-xs">16</span>
+            </tab-heading>
+            <div class="panel-body">
+                <form class="form-horizontal" method="get">
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">字段字段</label>
+                        <div class="col-sm-10">
+                            <span class="help-block m-b-none">saas.test.odianyun.com</span>
+                        </div>
+                    </div>
+                    <div class="line line-dashed b-b line-lg  "></div>
+
+                    <div class="form-group has-error">
+                        <label class="col-sm-2 control-label">字段字段</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control">
+                            <span class="help-block m-b-none">error message error message error message error message.</span>
+                        </div>
+                    </div>
+                    <div class="line line-dashed b-b line-lg  "></div>
+
+                    <div class="form-group has-error" >
+                        <label class="col-sm-2 control-label">字段字段</label>
+                        <div class="col-sm-9">
+                            <select class="w-md col-md-2 form-control">
+                                <option value="AK">请选择</option>
+                                <option value="AK">北京</option>
+                                <option value="HI">上海</option>
+                                <option value="AK">南京</option>
+                                <option value="HI">安徽</option>
+                            </select>
+                            <select class="w-md col-md-2 form-control mgl15px">
+                                <option value="AK">请选择</option>
+                                <option value="AK">北京</option>
+                                <option value="HI">上海</option>
+                                <option value="AK">南京</option>
+                                <option value="HI">安徽</option>
+                            </select>
+                            <select class="w-md col-md-2 form-control mgl15px">
+                                <option value="AK">请选择</option>
+                                <option value="AK">北京</option>
+                                <option value="HI">上海</option>
+                                <option value="AK">南京</option>
+                                <option value="HI">安徽</option>
+                            </select>
+                            <select class="w-md col-md-2 form-control mgl15px">
+                                <option value="AK">请选择</option>
+                                <option value="AK">北京</option>
+                                <option value="HI">上海</option>
+                                <option value="AK">南京</option>
+                                <option value="HI">安徽</option>
+                            </select>
+                        </div>
+                        <span class="help-block m-b-none col-sm-offset-2 col-sm-10">error message error message error message error message.</span>
+                    </div>
+                    <div class="line line-dashed b-b line-lg  "></div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">字段字段</label>
+                        <div class="col-sm-9">
+                            <div class=" checkbox-inline pdl0">
+                                <label class="i-checks">
+                                    <input type="checkbox" value="">
+                                    <i></i>
+                                    字段
+                                </label>
+                            </div>
+                            <div class=" checkbox-inline pdl0">
+                                <label class="i-checks">
+                                    <input type="checkbox" value="">
+                                    <i></i>
+                                    字段
+                                </label>
+                            </div>
+                            <div class=" checkbox-inline pdl0">
+                                <label class="i-checks">
+                                    <input type="checkbox" value="">
+                                    <i></i>
+                                    字段
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line line-dashed b-b line-lg  "></div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><i class="asterisk">*</i>时间时间</label>
+                        <div class="col-sm-10">
+                            <div class="radio-inline pdl0" ng-controller="timeCtrl" >
+                                <label class="i-checks">
+                                    <input type="radio" name="b" value="option2" checked="">
+                                    <i></i>
+                                    固定有效时间
+                                </label>
+                                <input type="text"  value="" class="timeiconbg" style="width: 180px;margin-right: 5px;" datetimepicker for-id="from" options="options2" close="close(from)" max-date="to" ng-model="from">至
+                                <input type="text"  value="" class="timeiconbg" style="width: 180px;margin-right: 5px;" datetimepicker for-id="to" options="options3" close="close(to)" min-date="from" ng-model="to">
+
+                            </div>
+                            <div class="radio-inline pdl0">
+                                <label class="i-checks">
+                                    <input type="radio" name="b" value="option2" checked="">
+                                    <i></i>
+                                    自用户领取
+                                </label>
+                                <input type="text"  value="" style="width: 80px;margin-right: 5px;" class="inputSubmit">天后失效
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line line-dashed b-b line-lg"></div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"> Checkboxes & radios</label>
+                        <div class="col-sm-10">
+                            <div class="checkbox">
+                                <label class="i-checks">
+                                    <input type="checkbox" value="">
+                                    <i></i>
+                                    1
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="i-checks">
+                                    <input type="checkbox" checked value="">
+                                    <i></i>
+                                   2
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="i-checks">
+                                    <input type="checkbox" checked disabled value="">
+                                    <i></i>
+                                    3
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="i-checks">
+                                    <input type="checkbox" disabled value="">
+                                    <i></i>
+                                    4
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label class="i-checks">
+                                    <input type="radio" name="a" value="option1">
+                                    <i></i>
+                                    5
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label class="i-checks">
+                                    <input type="radio" name="a" value="option2" checked>
+                                    <i></i>
+                                    6
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label class="i-checks">
+                                    <input type="radio" value="option2" checked disabled>
+                                    <i></i>
+                                    7
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label class="i-checks">
+                                    <input type="radio" name="a" disabled>
+                                    <i></i>
+                                    8
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line line-dashed b-b line-lg"></div>
+
+                    <div class="form-group" ng-controller="timeCtrl">
+                        <label class="col-sm-2 control-label">时间时间</label>
+                        <div class="col-sm-4">
+                            <input type="text"  value="" class="timeiconbg form-control"  datetimepicker for-id="from" options="options2" close="close(from)" max-date="to" ng-model="from">
+                        </div>
+                        <div class="col-sm-1 text-center">
+                            <label class=" control-label ">至</label>
+                        </div>
+                        <div class="col-sm-4" >
+                            <input type="text"  value="" class="timeiconbg form-control" datetimepicker for-id="to" options="options3" close="close(to)" min-date="from" ng-model="to">
+                        </div>
+                    </div>
+                    <div class="line line-dashed b-b line-lg  "></div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">字段字段</label>
+                        <div class="col-sm-10">
+                            <div class="radio-inline pdl0">
+                                <label class="i-checks">
+                                    <input type="radio" name="a" value="option2" checked="">
+                                    <i></i>
+                                    字段
+                                </label>
+                            </div>
+                            <div class="radio-inline pdl0">
+                                <label class="i-checks">
+                                    <input type="radio" name="a" value="option2" checked="">
+                                    <i></i>
+                                    字段
+                                </label>
+                            </div>
+                            <div class="radio-inline pdl0">
+                                <label class="i-checks">
+                                    <input type="radio" name="a" value="option2" checked="">
+                                    <i></i>
+                                    字段
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line line-dashed b-b line-lg  "></div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">字段字段</label>
+                        <div class="col-sm-4">
+                            <select class="  form-control">
+                                <option value="">请选择</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="line line-dashed b-b line-lg  "></div>
+
+                    <div class="form-group has-error"  ng-controller="yl_fileUploaderCtrl">
+                        <label class="col-sm-2 control-label"><i class="asterisk">*</i>活动宣传图</label>
+                        <div class="col-sm-9">
+                            <div ng-repeat="item in uploader.queue">
+                                <img ng-src="{{img}}"/>
+                            </div>
+                            <a  href="javascript:void 0;" class="btn btn-info" onClick="file.click()">选择图片</a>
+                            <input type="file" id="file" nv-file-select="" uploader="uploader" style="display: none;" />
+                        </div>
+                    </div>
+                    <div class="line line-dashed b-b line-lg "></div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">内容</label>
+                        <div class="col-sm-9">
+                            <div class="btn-toolbar m-b-sm btn-editor" data-role="editor-toolbar" data-target="#editor">
+                                <div class="btn-group dropdown">
+                                    <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" tooltip="Font"><i class="fa fa-font"></i><b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href dropdown-toggle data-edit="fontName Serif" style="font-family:'Serif'">Serif</a></li>
+                                        <li><a href dropdown-toggle data-edit="fontName Sans" style="font-family:'Sans'">Sans</a></li>
+                                        <li><a href dropdown-toggle data-edit="fontName Arial" style="font-family:'Arial'">Arial</a></li></ul>
+                                </div>
+                                <div class="btn-group dropdown">
+                                    <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" tooltip="Font Size"><i class="fa fa-text-height"></i>&nbsp;<b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href dropdown-toggle data-edit="fontSize 5" style="font-size:24px">Huge</a></li>
+                                        <li><a href dropdown-toggle data-edit="fontSize 3" style="font-size:18px">Normal</a></li>
+                                        <li><a href dropdown-toggle data-edit="fontSize 1" style="font-size:14px">Small</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group">
+                                    <a class="btn btn-default" data-edit="bold" tooltip="Bold (Ctrl/Cmd+B)"><i class="fa fa-bold"></i></a>
+                                    <a class="btn btn-default" data-edit="italic" tooltip="Italic (Ctrl/Cmd+I)"><i class="fa fa-italic"></i></a>
+                                    <a class="btn btn-default" data-edit="strikethrough" tooltip="Strikethrough"><i class="fa fa-strikethrough"></i></a>
+                                    <a class="btn btn-default" data-edit="underline" tooltip="Underline (Ctrl/Cmd+U)"><i class="fa fa-underline"></i></a>
+                                </div>
+                                <div class="btn-group">
+                                    <a class="btn btn-default" data-edit="insertunorderedlist" tooltip="Bullet list"><i class="fa fa-list-ul"></i></a>
+                                    <a class="btn btn-default" data-edit="insertorderedlist" tooltip="Number list"><i class="fa fa-list-ol"></i></a>
+                                    <a class="btn btn-default" data-edit="outdent" tooltip="Reduce indent (Shift+Tab)"><i class="fa fa-dedent"></i></a>
+                                    <a class="btn btn-default" data-edit="indent" tooltip="Indent (Tab)"><i class="fa fa-indent"></i></a>
+                                </div>
+                                <div class="btn-group">
+                                    <a class="btn btn-default" data-edit="justifyleft" tooltip="Align Left (Ctrl/Cmd+L)"><i class="fa fa-align-left"></i></a>
+                                    <a class="btn btn-default" data-edit="justifycenter" tooltip="Center (Ctrl/Cmd+E)"><i class="fa fa-align-center"></i></a>
+                                    <a class="btn btn-default" data-edit="justifyright" tooltip="Align Right (Ctrl/Cmd+R)"><i class="fa fa-align-right"></i></a>
+                                    <a class="btn btn-default" data-edit="justifyfull" tooltip="Justify (Ctrl/Cmd+J)"><i class="fa fa-align-justify"></i></a>
+                                </div>
+                                <div class="btn-group dropdown">
+                                    <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" tooltip="Hyperlink"><i class="fa fa-link"></i></a>
+                                    <div class="dropdown-menu">
+                                        <div class="input-group m-l-xs m-r-xs">
+                                            <input class="form-control input-sm" onclick="return false;" placeholder="URL" type="text" data-edit="createLink"/>
+                                            <div class="input-group-btn">
+                                                <button class="btn btn-sm btn-default" type="button">Add</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="btn btn-default" data-edit="unlink" tooltip="Remove Hyperlink"><i class="fa fa-cut"></i></a>
+                                </div>
+
+                                <div class="btn-group">
+                                    <a class="btn btn-default" tooltip="Insert picture (or just drag & drop)" id="pictureBtn"><i class="fa fa-picture-o"></i></a>
+                                    <input type="file" data-edit="insertImage" style="position:absolute; opacity:0; width:41px; height:34px" />
+                                </div>
+                                <div class="btn-group">
+                                    <a class="btn btn-default" data-edit="undo" tooltip="Undo (Ctrl/Cmd+Z)"><i class="fa fa-undo"></i></a>
+                                    <a class="btn btn-default" data-edit="redo" tooltip="Redo (Ctrl/Cmd+Y)"><i class="fa fa-repeat"></i></a>
+                                </div>
+                            </div>
+                            <div ui-jq="wysiwyg" class="form-control" style="overflow:scroll;height:200px;max-height:200px">
+                                Go ahead&hellip;
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line line-dashed b-b line-lg  "></div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Switch</label>
+                        <div class="col-sm-10">
+                            <label class="i-switch m-t-xs m-r">
+                                <input type="checkbox" checked>
+                                <i></i>
+                            </label>
+                            <label class="i-switch bg-info m-t-xs m-r">
+                                <input type="checkbox" checked>
+                                <i></i>
+                            </label>
+                            <label class="i-switch bg-primary m-t-xs m-r">
+                                <input type="checkbox" checked>
+                                <i></i>
+                            </label>
+                            <label class="i-switch bg-danger m-t-xs m-r">
+                                <input type="checkbox" checked>
+                                <i></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="line line-dashed b-b line-lg  "></div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">File input</label>
+                        <div class="col-sm-9">
+                            <input ui-jq="filestyle" type="file" data-icon="false" data-classButton="btn btn-default" data-classInput="form-control inline v-middle input-s">
+                        </div>
+                    </div>
+                    <div class="line line-dashed b-b line-lg  "></div>
+
+                    <div class="form-group" ng-controller="colorpickerCtrl">
+                        <label class="col-sm-2 control-label">颜色选择</label>
+                        <div class="col-sm-9">
+                            <input class="form-control" colorpicker colorpicker-with-input="true" type="text" ng-model="your_model_5" />
+                        </div>
+                    </div>
+                    <div class="line line-dashed b-b line-lg  "></div>
+
+
+                    <div class="form-group text-center">
+                        <button class="btn btn-info btn-lg w-md ">保存</button>
+                        <button class="btn btn-default btn-lg w-md">返回</button>
+                    </div>
+
+                </form>
+            </div>
+        </tab>
+        <tab>
+            <tab-heading>
+                选项卡 <span class="badge badge-sm m-l-xs">6</span>
+            </tab-heading>
+
+        </tab>
+    </tabset>
+</div>

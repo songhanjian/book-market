@@ -1,0 +1,22 @@
+<div class="wrapper-md bg-light b-b headerPadding">
+    <h1 class="m-n font-thin h3"><a href="">一级目录1</a>&gt;<a href="">树</a></h1>
+</div>
+<div class="wrapper-md" ng-controller="treeCtrl">
+    <div class="col-sm-4  b-b b-l b-r b-t" style="background: #fff;padding: 20px 0">
+        <tree tree-data="my_data"
+              tree-control="my_tree"
+              on-select="select(branch)"
+              check-item="add(branch)"
+              is-search="true"
+              mark-class="pink"
+              item-type="checkbox"
+              ng-model="obj.selection"
+              start-flag="start"
+              expand-level="1">
+            <!--initial-selection="Cat"-->
+        </tree>
+    </div>
+</div>
+
+<label ng-if=\"itemType=='checkbox'&&row.branch.children.length<=0\" class=\"indented i-checks \"><input type=\"checkbox\" ng-checked=\"row.branch.added\" ng-init=\"row.branch.added=checkStatus(row.label)\"><i></i></label>
+<i ng-if=\"itemType=='checkbox'&&row.branch.children.length<=0\" class=\"indented\"><input type=\"checkbox\" ng-checked=\"row.branch.added\" ng-init=\"row.branch.added=checkStatus(row.label)\"/></i>

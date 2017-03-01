@@ -1,0 +1,41 @@
+<div ng-init="init()">
+    <div class="title"><span class="title_icon"><img src="images/bullet1.gif" alt="" title=""/></span>My account</div>
+    <div class="feat_prod_box_details">
+        <p class="details"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+            minim veniam, quis nostrud. </p>
+        <div class="contact_form">
+            <div class="form_subtitle">login into your account</div>
+            <form name="register">
+                <div class="form_row" ng-show="isLogin">
+                    <label><strong>already login!</strong></label>
+                </div>
+                <div ng-show="!isLogin">
+                    <div class="form_row">
+                        <label class="contact"><strong>Username:</strong></label>
+                        <input type="text" class="contact_input" ng-model="user.username"/>
+                    </div>
+                    <div class="form_row">
+                        <label class="contact"><strong>Password:</strong></label>
+                        <input type="password" class="contact_input" ng-model="user.password"/>
+                        <div>
+                            <label class="contact"><strong>{{loginMesg}}</strong></label>
+                        </div>
+
+                    </div>
+                    <div class="form_row">
+                        <div class="terms">
+                            <input type="checkbox" name="terms"/>
+                            Remember me
+                        </div>
+                    </div>
+                    <div class="form_row col-sm-2">
+                        <input type="submit" class="register" value="submit" ng-click="login()"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>

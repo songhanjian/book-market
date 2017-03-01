@@ -1,0 +1,43 @@
+<div ng-init="init()">
+    <div class="title"><span class="title_icon"><img src="images/bullet1.gif" alt="" title=""/></span>My cart</div>
+    <div class="feat_prod_box_details">
+        <table class="cart_table">
+            <thead>
+            <tr class="cart_title">
+                <th>OP</th>
+                <th>Item pic</th>
+                <th>Book name</th>
+                <th>Unit price</th>
+                <th style="width: 80px">Qty</th>
+                <th>Total</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="c in cart.cartBookRels">
+                <td><input type="checkbox" ng-checked="c.isChosen" ng-click="cartBookRelChosen(c)"></td>
+                <td><a><img ng-src="{{c.imgUrl}}" alt="" title="" border="0" class="cart_thumb"/></a></td>
+                <td>{{c.bookName.substr(0,15)}}<br>{{c.bookName.substr(15,c.bookName.length)}}</td>
+                <td>{{c.bookPrice}}￥</td>
+                <td><a href ng-click="addCount(c)">+</a>&nbsp;&nbsp;{{c.count}}&nbsp;&nbsp;<a href
+                                                                                              ng-click="subCount(c)">-</a>
+                </td>
+                <td>{{c.totalPrice}}</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="cart_total"><span class="red">TOTAL SHIPPING:</span></td>
+                <td>{{totalPrice}}￥</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="cart_total"><span class="red">TOTAL:</span></td>
+                <td>{{currentTotalPrice}}￥</td>
+            </tr>
+            </tbody>
+        </table>
+        <a href class="continue" ng-click="saveCart()">save</a><a href class="continue"
+                                                                  ng-click="deleteCart()">delete</a> <a href
+                                                                                                        class="checkout"
+                                                                                                        ng-click="payoff()">payoff</a>
+    </div>
+    <div class="clear"></div>
+</div>
+

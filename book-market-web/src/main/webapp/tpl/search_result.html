@@ -1,0 +1,492 @@
+<div class="wrapper-md bg-light b-b headerPadding">
+    <h1 class="m-n font-thin h3"><a href="">一级目录1</a>&gt;<a href="">查询</a></h1>
+</div>
+
+
+
+<div class="wrapper-md">
+    <div class="panel panel-default">
+        <div class="panel-heading font-bold">
+            商户信息查询
+        </div>
+        <div class="panel-body">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <div class="col-sm-4 mgt15">
+                        <label for="" class="col-sm-5 control-label"><i class="asterisk ">*</i>字段字段</label>
+                        <div class="col-sm-7">
+                            <select class=" form-control">
+                                <option value="AK">请选择</option>
+                                <option value="AK">1</option>
+                                <option value="HI">2</option>
+                                <option value="AK">3</option>
+                                <option value="HI">4</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 mgt15">
+                        <label for="" class="col-sm-5 control-label">字段字段</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 mgt15">
+                        <button type="submit" class="btn btn-info">查询</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading font-bold">
+            信息查询
+        </div>
+        <div class="panel-body">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <div class="col-sm-4 mgt15">
+                        <label   class="col-sm-5 control-label">字段字段</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 mgt15">
+                        <label   class="col-sm-5 control-label">字段字段</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" placeholder="" readonly>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-4 mgt15">
+                        <label   class="col-sm-5 control-label">字段字段</label>
+                        <div class="col-sm-7">
+                            <select class=" form-control">
+                                <option value="1" label="">请选择</option>
+                                <option value="2" label="">1</option>
+                                <option value="3" label="">2</option>
+                                <option value="4" label="">3</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 mgt15">
+                        <label class="col-sm-5 control-label">字段字段</label>
+                        <div class="col-sm-7">
+                            <div class="radio-inline pdl0">
+                                <label class="i-checks">
+                                    <input type="radio" name="a" value="option2" checked="">
+                                    <i></i>
+                                    是
+                                </label>
+                            </div>
+                            <div class="radio-inline pdl0">
+                                <label class="i-checks">
+                                    <input type="radio" name="a" value="option2" checked="">
+                                    <i></i>
+                                    否
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div ng-controller="timeCtrl">
+                        <div class="col-sm-4 mgt15" >
+                            <label   class="col-sm-5 control-label">商品类型</label>
+                            <div class="col-sm-7">
+                                <input type="text"  value="" class="timeiconbg form-control"  datetimepicker for-id="from" options="options2" close="close(from)" max-date="to" ng-model="from">
+                            </div>
+                        </div>
+                        <div class="col-sm-4 mgt15" >
+                            <label   class="col-sm-5 control-label">至</label>
+                            <div class="col-sm-7">
+                                <input type="text"  value="" class="timeiconbg form-control" datetimepicker for-id="to" options="options3" close="close(to)" min-date="from" ng-model="to">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-info">查询</button>
+                    <button type="button" class="btn btn-info">新增</button>
+                    <button type="submit" class="btn btn-info">清空</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--<div class="panel panel-default">-->
+        <!--<div class="panel-heading font-bold">-->
+            <!--table样式-->
+        <!--</div>-->
+        <!--<div class="row wrapper">-->
+            <!--<div class="col-sm-5 m-b-xs">-->
+                <!--<button class="btn btn-sm btn-info">批量删除</button>-->
+                <!--<button class="btn btn-sm btn-info" data-toggle="modal" data-target="#formT">表单</button>-->
+                <!--<button class="btn btn-sm btn-info" data-toggle="modal" data-target="#searchT">查询</button>-->
+            <!--</div>-->
+            <!--<div class="col-sm-4">-->
+            <!--</div>-->
+            <!--<div class="col-sm-3">-->
+                <!--<div class="input-group">-->
+                    <!--<input type="text" class="input-sm form-control" placeholder="Search">-->
+                <!--<span class="input-group-btn">-->
+                <!--<button class="btn btn-sm btn-default" type="button">Go!</button>-->
+                <!--</span>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class=" portlet-body flip-scroll">-->
+            <!--<table class=" table-bordered table-striped table-condensed flip-content"  ng-controller="checkCtrl">-->
+                <!--<thead>-->
+                <!--<tr>-->
+                    <!--<th style="width:100px;">-->
+                        <!--<label class="i-checks m-b-none">-->
+                            <!--<input type="checkbox" ng-click="selectAll($event)" ng-checked="isSelectedAll()" ><i></i>-->
+                        <!--</label>-->
+                        <!--全选-->
+                    <!--</th>-->
+                    <!--<th>TEST</th>-->
+                    <!--<th>TEST</th>-->
+                    <!--<th>TEST</th>-->
+                    <!--<th>TEST</th>-->
+                <!--</tr>-->
+                <!--</thead>-->
+                <!--<tbody>-->
+                <!--<tr ng-repeat="e in entities" ng-class="getSelectedClass(e.id)">-->
+                    <!--<th>-->
+                        <!--<label class="i-checks m-b-none">-->
+                            <!--<input type="checkbox" name="selected" ng-checked="isSelected(e.id)" ng-click="updateSelection($event, e.id)"><i></i>-->
+                        <!--</label>-->
+                    <!--</th>-->
+                    <!--<td>{{$index}}</td>-->
+                    <!--<td>{{e.test1}}</td>-->
+                    <!--<td>{{e.test2}}</td>-->
+                    <!--<td>{{e.test3}}</td>-->
+                    <!--<td>-->
+                        <!--<button class="btn btn-sm btn-info" data-toggle="modal" data-target="#deleteT">删除</button>-->
+                    <!--</td>-->
+                <!--</tr>-->
+                <!--</tbody>-->
+            <!--</table>-->
+        <!--</div>-->
+
+        <!--<footer class="panel-footer">-->
+            <!--<div class='row'>-->
+                <!--<div class="col-sm-8 text-left">-->
+                    <!--<small class='text-muted inline m-t-sm m-b-sm'>总共123132条数据</small>-->
+                    <!--<small class='text-muted inline m-t-sm m-b-sm'>/共55页</small>-->
+                    <!--<small class='mgl15px text-muted inline m-t-sm m-b-sm'>跳至</small><input type='text' style='width: 80px;margin: 0 5px' class='inputSubmit'><small class='text-muted inline m-t-sm m-b-sm'>页</small>-->
+            <!--<span >-->
+            <!--<small class='mgl15px text-muted inline m-t-sm m-b-sm'>每页显示</small>-->
+            <!--<select name='' class='inputSubmit' style='width: 100px'  >-->
+                <!--<option value="">5</option>-->
+                <!--<option value="">10</option>-->
+                <!--<option value="">15</option>-->
+                <!--<option value="">20</option>-->
+            <!--</select>-->
+            <!--</span>-->
+                    <!--<small class='text-muted inline m-t-sm m-b-sm'>条</small>-->
+                <!--</div>-->
+                <!--<div class='col-sm-4 text-right text-center-xs'>-->
+                    <!--<ul class='pagination pagination-sm m-t-none m-b-none'>-->
+                        <!--<li><a><i class='fa fa-chevron-left'></i></a></li>-->
+                        <!--<li><a href>1</a></li>-->
+                        <!--<li><a href>2</a></li>-->
+                        <!--<li><a href><i class='fa fa-chevron-right'></i></a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+
+        <!--</footer>-->
+    <!--</div>-->
+
+    <div class="panel panel-default" ng-controller="yl_paginationCtrl">
+        <div class="panel-heading font-bold">
+            查询结果
+        </div>
+        <div class="row wrapper">
+            <div class="col-sm-5 m-b-xs">
+                <button class="btn btn-sm btn-info">常用操作放置的位置</button>
+                <button class="btn btn-sm btn-info">批量删除</button>
+                <button class="btn btn-sm btn-info" data-toggle="modal" data-target="#formT">表单</button>
+                <button class="btn btn-sm btn-info" data-toggle="modal" data-target="#searchT">查询</button>
+            </div>
+            <div class="col-sm-4">
+            </div>
+            <div class="col-sm-3">
+                <div class="input-group">
+                <input type="text" class="input-sm form-control" placeholder="Search">
+                <span class="input-group-btn">
+                <button class="btn btn-sm btn-default" type="button">Go!</button>
+                </span>
+                </div>
+            </div>
+        </div>
+        <div class=" portlet-body flip-scroll">
+
+            <table class=" table-bordered table-striped table-condensed flip-content">
+                <thead>
+                <tr>
+                    <th style="width:100px;">
+                        <label class="i-checks m-b-none">
+                            <input type="checkbox" ><i></i>
+                        </label>
+                        全选
+                    </th>
+                    <th>TEST</th>
+                    <th>TEST</th>
+                    <th>TEST</th>
+                    <th>TEST</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="d in dataList1 track by $index" >
+                    <th>
+                        <label class="i-checks m-b-none">
+                            <input type="checkbox" name="selected"><i></i>
+                        </label>
+                    </th>
+                    <td>{{(currentPage1-1)*itemPerPage1+1+$index}}</td>
+                    <td>{{d}}</td>
+                    <td>{{d*d}}</td>
+                    <td>
+                        <button class="btn btn-sm btn-info" data-toggle="modal" data-target="#deleteT">删除</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <footer class="panel-footer">
+            <pagination total-items="totalItems1" ng-model="currentPage1"
+                        items-per-page="itemPerPage1"
+                        previous-text="上一页" next-text="下一页"
+                        page-sizes="pageSizes1"
+                        edit-page="editPage1"
+                        ng-change="getData(currentPage1,itemPerPage1)"></pagination>
+        </footer>
+    </div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<!--弹窗-删除-->
+<div class="modal fade" id="deleteT" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                </button>
+                <h4 class="modal-title" id="">
+                    信息提示 <span class="close-popup" data-dismiss="modal"></span>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <p>确定删除吗？</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消
+                </button>
+                <button type="button" class="btn btn-info">
+                    确定
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹窗-查询-->
+<div class="modal fade" id="searchT" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog w80">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                </button>
+                <h4 class="modal-title" id="">
+                    添加参与商家 <span class="close-popup" data-dismiss="modal"></span>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="panel panel-default">
+                    <div class="panel-heading font-bold">
+                        商家信息查询
+                    </div>
+                    <div class="panel-body" ng-controller="selectMerchantsCtrl">
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+
+                                <div class="form-group has-error">
+                                    <label class="col-sm-2 control-label">商家ID</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control">
+                                        <span class="help-block m-b-none">error message error message error message error message.</span>
+                                    </div>
+                                </div>
+                                <div class="form-group has-error">
+                                    <label class="col-sm-2 control-label">商家名称</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control">
+                                        <span class="help-block m-b-none">error message error message error message error message.</span>
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label class="col-sm-2 control-label">已选地点</label>
+                                    <div class="col-sm-10">
+                                        <span class="siteSpan" ng-repeat="a in siteList1" ng-click="delSite($index)">{{a.test}}<i class="icon-close"></i></span>
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label class="col-sm-2 control-label">常用地点</label>
+                                    <div class="col-sm-10">
+                                        <span class="siteSpan" ng-repeat="a in siteList2" ng-click="addSite(siteList2,$index)">{{a.test}}</span>
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label class="col-sm-2 control-label">所属省份</label>
+                                    <div class="col-sm-7 citys">
+                                        <div class="provinces" ng-click="provincesShowItems_sichuan=true">
+                                            四川省
+                                            <div class="provinces_city" ng-show="provincesShowItems_sichuan" ng-mouseleave="provincesShowItems_sichuan=false">
+                                                <span class="siteSpan" ng-repeat="a in siteList3" ng-click="addSite(siteList3,$index)">{{a.test}}</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="provinces" ng-click="provincesShowItems_ciqiong=true">
+                                            词穷省
+                                            <div class="provinces_city" ng-show="provincesShowItems_ciqiong" ng-mouseleave="provincesShowItems_ciqiong=false">
+                                                <span class="siteSpan" ng-repeat="a in siteList4" ng-click="addSite(siteList4,$index)">{{a.test}}</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group text-center">
+                                <button type="submit" class="btn btn-info w-md">查询</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading font-bold">
+                        查询结果显示
+                    </div>
+                    <div class="portlet-body flip-scroll">
+                        <table class=" table-striped table-condensed flip-content"  ng-controller="checkCtrl">
+                            <thead>
+                            <tr>
+                                <th style="width:100px;">
+                                    <label class="i-checks m-b-none">
+                                        <input type="checkbox" ng-click="selectAll($event)" ng-checked="isSelectedAll()" ><i></i>
+                                    </label>
+                                    全选
+                                </th>
+                                <th>TEST</th>
+                                <th>TEST</th>
+                                <th>TEST</th>
+                                <th>TEST</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="e in entities" ng-class="getSelectedClass(e.id)">
+                                <th>
+                                    <label class="i-checks m-b-none">
+                                        <input type="checkbox" name="selected" ng-checked="isSelected(e.id)" ng-click="updateSelection($event, e.id)"><i></i>
+                                    </label>
+                                </th>
+                                <td>{{e.test1}}</td>
+                                <td>{{e.test2}}</td>
+                                <td>{{e.test3}}</td>
+                                <td>
+                                    <button class="btn btn-sm btn-info">删除</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <footer class="panel-footer">
+                        <div class="row">
+                            <div class="col-sm-8 text-left">
+                                <small class="text-muted inline m-t-sm m-b-sm">总共121212条数据</small>
+                                <small class="mgl15px text-muted inline m-t-sm m-b-sm">跳至</small><input type="text" style="width: 80px;margin: 0 5px" class="inputSubmit"><small class="text-muted inline m-t-sm m-b-sm">页</small>
+                                <small class="mgl15px text-muted inline m-t-sm m-b-sm">每页显示</small>
+                                <select name="" id="" class="inputSubmit" style="width: 100px">
+                                    <option value="">10</option>
+                                    <option value="">20</option>
+                                    <option value="">50</option>
+                                </select>
+                                <small class=" text-muted inline m-t-sm m-b-sm">条</small>
+                            </div>
+                            <div class="col-sm-4 text-right text-center-xs">
+                                <ul class="pagination pagination-sm m-t-none m-b-none">
+                                    <li><a href><i class="fa fa-chevron-left"></i></a></li>
+                                    <li><a href>1</a></li>
+                                    <li><a href>2</a></li>
+                                    <li><a href>3</a></li>
+                                    <li><a href>4</a></li>
+                                    <li><a href>5</a></li>
+                                    <li><a href><i class="fa fa-chevron-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-info" data-dismiss="modal">确定添加</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹窗-表单-->
+<div class="modal fade" id="formT" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                </button>
+                <h4 class="modal-title" id="">
+                    字段字段 <span class="close-popup" data-dismiss="modal"></span>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" method="get">
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">字段字段</label>
+                        <div class="col-sm-10">
+                            <span class="help-block m-b-none">saas.test.odianyun.com</span>
+                        </div>
+                    </div>
+                    <div class="line line-dashed b-b line-lg  "></div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">字段字段</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-info" data-dismiss="modal">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
